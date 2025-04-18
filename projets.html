@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Muriel Gosnat</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .profile-info h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        
+        .profile-info h2 {
+            margin: 5px 0 0;
+            font-weight: normal;
+            font-size: 1.3em;
+            color: #3498db;
+        }
+        
+        nav {
+            background-color: #34495e;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav li {
+            margin: 0;
+        }
+        
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a.active {
+            background-color: #3498db;
+        }
+        
+        nav a:hover {
+            background-color: #3498db;
+        }
+        
+        .page-title {
+            background-color: #ecf0f1;
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+        
+        .page-title h2 {
+            margin: 0;
+            font-size: 2em;
+            color: #2c3e50;
+        }
+        
+        .projects-filters {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .filter-btn {
+            background-color: #ecf0f1;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-img {
+            background-color: #ddd;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .project-info {
+            padding: 20px;
+        }
+        
+        .project-info h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .project-category {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            font-size: 0.8em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-info">
+                    <h1>Muriel GOSNAT</h1>
+                    <h2>Chef de projet - Data & IA</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="experience.html">Expérience</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html" class="active">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="page-title">
+        <div class="container">
+            <h2>Mes projets et réalisations</h2>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="projects-filters">
+            <button class="filter-btn active">Tous</button>
+            <button class="filter-btn">Data & IA</button>
+            <button class="filter-btn">Communication Santé</button>
+            <button class="filter-btn">Recherche</button>
+        </div>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">
+                    <p>Image du projet</p>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Data & IA</span>
+                    <h3>Optimisation de l'ADMET par IA</h3>
+                    <p>Développement d'un cadre managérial pour la prédiction des caractéristiques physico-chimiques et biologiques d'une molécule à l'aide de l'intelligence artificielle.</p>
+                    <a href="#" class="btn">En savoir plus</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <p>Image du projet</p>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Data & IA</span>
+                    <h3>Modèle d'IA de gestion des connaissances</h3>
+                    <p>Validation d'un système avancé de gestion des connaissances basé sur l'IA pour optimiser l'utilisation des données scientifiques.</p>
+                    <a href="#" class="btn">En savoir plus</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <p>Image du projet</p>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Communication Santé</span>
+                    <h3>Campagne de sensibilisation médicale</h3>
+                    <p>Conception et mise en œuvre d'une campagne de communication stratégique pour sensibiliser le public à une pathologie spécifique.</p>
+                    <a href="#" class="btn">En savoir plus</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <p>Image du projet</p>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Recherche</span>
+                    <h3>Étude sur les applications du métavers en santé</h3>
+                    <p>Analyse des potentielles applications des technologies de métavers dans le secteur de la santé et des soins médicaux.</p>
+                    <a href="#" class="btn">En savoir plus</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <p>Image du projet</p>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Communication Santé</span>
+                    <h3>Plateforme de communication scientifique</h3>
+                    <p>Développement d'une plateforme innovante pour faciliter la communication entre chercheurs, professionnels de santé et patients.</p>
+                    <a href="#" class="btn">En savoir plus</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <p>Image du projet</p>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Data & IA</span>
+                    <h3>Analyse prédictive pour la recherche clinique</h3>
+                    <p>Mise en place d'un système d'analyse prédictive pour améliorer l'efficacité des essais cliniques et réduire les délais de développement.</p>
+                    <a href="#" class="btn">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Muriel Gosnat - Tous droits réservés</p>
+            <p>
+                <a href="https://www.linkedin.com/in/muriel-gosnat/">LinkedIn</a>
+                | <a href="contact.html">Contact</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
