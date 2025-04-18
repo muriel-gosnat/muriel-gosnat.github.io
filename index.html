@@ -8,209 +8,238 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-            color: #333;
+            padding: 0 20px;
         }
+        
         header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .profile-info h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        
+        .profile-info h2 {
+            margin: 5px 0 0;
+            font-weight: normal;
+            font-size: 1.3em;
+            color: #3498db;
+        }
+        
+        nav {
+            background-color: #34495e;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav li {
+            margin: 0;
+        }
+        
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a.active {
+            background-color: #3498db;
+        }
+        
+        nav a:hover {
+            background-color: #3498db;
+        }
+        
+        .hero {
+            background-color: #ecf0f1;
+            padding: 60px 0;
             text-align: center;
             margin-bottom: 40px;
         }
-        h1 {
+        
+        .hero h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
             color: #2c3e50;
-            margin-bottom: 5px;
         }
-        h2 {
-            color: #3498db;
-            font-weight: normal;
-        }
-        .intro {
-            font-style: italic;
-            text-align: center;
-            margin-bottom: 30px;
+        
+        .hero p {
+            font-size: 1.2em;
             max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
+            line-height: 1.8;
         }
-        ..container {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-}
-.left-column {
-    display: table-cell;
-    width: 60%;
-    padding-right: 20px;
-    vertical-align: top;
-}
-.right-column {
-    display: table-cell;
-    width: 40%;
-    vertical-align: top;
-}
-@media (max-width: 768px) {
-    .container, .left-column, .right-column {
-        display: block;
-        width: 100%;
-        padding-right: 0;
-    }
-}
+        
+        .featured-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
         }
-        .experience h3 {
+        
+        .section-card {
+            background-color: white;
+            border-radius: 5px;
+            padding: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .section-card h3 {
             color: #2c3e50;
-            margin-bottom: 5px;
-        }
-        .experience h4 {
-            color: #7f8c8d;
-            font-style: italic;
             margin-top: 0;
+            font-size: 1.5em;
         }
-        ul {
+        
+        .section-card ul {
             padding-left: 20px;
         }
-        .contact {
-            margin-bottom: 30px;
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
         }
-        .contact p {
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+        
+        footer p {
             margin: 5px 0;
         }
-        section {
-            margin-bottom: 30px;
+        
+        footer a {
+            color: #3498db;
+            text-decoration: none;
         }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
         @media (max-width: 768px) {
-            .container {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
                 flex-direction: column;
             }
-            .left-column, .right-column {
-                flex: 100%;
-                padding-right: 0;
+            
+            .featured-sections {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Muriel GOSNAT</h1>
-        <h2>Chef de projet - Data & IA</h2>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-info">
+                    <h1>Muriel GOSNAT</h1>
+                    <h2>Chef de projet - Data & IA</h2>
+                </div>
+            </div>
+        </div>
     </header>
-
-    <div class="intro">
-        <p>Actuellement en MBA IA & Data Innovation, je m'appuie sur 15 ans d'expérience en projets santé pour contribuer à des initiatives structurantes autour de la donnée. Avec une double expertise scientifique (PhD) et stratégique (ESSEC), je souhaite piloter des projets à l'interface entre recherche, institutions et intelligence artificielle.</p>
-    </div>
-
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="experience.html">Expérience</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="container">
+            <h2>Bienvenue sur mon site professionnel</h2>
+            <p>Actuellement en MBA IA & Data Innovation, je m'appuie sur 15 ans d'expérience en projets santé pour contribuer à des initiatives structurantes autour de la donnée. Avec une double expertise scientifique (PhD) et stratégique (ESSEC), je souhaite piloter des projets à l'interface entre recherche, institutions et intelligence artificielle.</p>
+        </div>
+    </section>
+    
     <div class="container">
-        <div class="left-column">
-            <section class="experience">
-                <h2>EXPÉRIENCES PROFESSIONNELLES</h2>
-                
-                <h3>Product Specialist</h3>
-                <h4>Biolevate, Paris (2024-2025)</h4>
-                <ul>
-                    <li>Validation du modèle d'IA de gestion des connaissances (1 article sous presse)</li>
-                    <li>Gestion de projet : Optimisation de l'ADMET à l'aide de l'IA - Développement d'un cadre managérial pour la prédiction des caractéristiques physico-chimiques et biologiques d'une molécule</li>
-                </ul>
-                
-                <h3>Responsable médico-marketing</h3>
-                <h4>Strategik & Numerik, Paris (2019-2024)</h4>
-                <p><em>Agence conseil en communication santé</em></p>
-                <ul>
-                    <li>Gestion de projet</li>
-                    <li>Analyses et synthèses stratégiques</li>
-                    <li>Création de concepts et de plateformes de communication</li>
-                </ul>
-                
-                <h3>Directrice médico-marketing</h3>
-                <h4>Saatchi&Saatchi Health / PublicisLifeBrands, Paris (2014-2019)</h4>
-                <p><em>Agence conseil en communication santé</em></p>
-                <ul>
-                    <li>Management d'une équipe de 5 concepteurs-rédacteurs</li>
-                    <li>Gestion de projet</li>
-                    <li>Mise en place et gestion de collaborations</li>
-                    <li>Analyses et synthèses stratégiques</li>
-                    <li>Création de concepts et de plateformes de communication</li>
-                </ul>
-                
-                <h3>Responsable cellule de veille stratégique</h3>
-                <h4>Sudler&Hennessey (groupe WPP), Paris (2013-2014)</h4>
-                <p><em>Agence conseil en communication santé</em></p>
-            </section>
-        </div>
-        
-        <div class="right-column">
-            <section class="contact">
-                <h2>COORDONNÉES</h2>
-                <p>📱 06 30 58 54 90</p>
-                <p>📍 2 rue Bernard Palissy, 94200 Ivry sur Seine</p>
-                <p>💼 <a href="https://www.linkedin.com/in/muriel-gosnat/">LinkedIn</a></p>
-            </section>
+        <div class="featured-sections">
+            <div class="section-card">
+                <h3>À propos de moi</h3>
+                <p>Découvrez mon parcours et ma vision pour l'intégration de l'IA et de la Data dans le secteur de la santé.</p>
+                <a href="apropos.html" class="btn">En savoir plus</a>
+            </div>
             
-            <section class="formation">
-                <h2>FORMATION</h2>
-                
-                <h3>MBA Intelligence Artificielle et Data Innovation</h3>
-                <p><em>DeVinci Executive Education</em><br>Sept 2025</p>
-                
-                <h3>DU métavers en santé</h3>
-                <p><em>Université Paris santé</em><br>2023</p>
-                
-                <h3>Mastère Marketing Management</h3>
-                <p><em>ESSEC</em><br>2003</p>
-                
-                <h3>Doctorat de chimie</h3>
-                <p><em>Université Paris XII</em><br>2000</p>
-            </section>
+            <div class="section-card">
+                <h3>Expérience Professionnelle</h3>
+                <p>Plus de 15 ans d'expérience dans la gestion de projets santé, la communication scientifique et le développement de stratégies innovantes.</p>
+                <a href="experience.html" class="btn">Voir mon parcours</a>
+            </div>
             
-            <section class="competences">
-                <h2>COMPÉTENCES</h2>
-                
-                <h3>Métier</h3>
-                <ul>
-                    <li>Coordination de projets institutionnels et scientifiques</li>
-                    <li>Analyse et synthèse stratégique</li>
-                    <li>Rédaction scientifique & synthèse stratégique</li>
-                    <li>Conceptualisation</li>
-                </ul>
-                
-                <h3>Langues</h3>
-                <ul>
-                    <li>Anglais professionnel</li>
-                    <li>Russe (notions)</li>
-                    <li>Finlandais (notions)</li>
-                </ul>
-                
-                <h3>Qualités</h3>
-                <ul>
-                    <li>Communication/Prise de parole en public</li>
-                    <li>Résilience</li>
-                    <li>Flexibilité</li>
-                    <li>Management</li>
-                </ul>
-            </section>
-            
-            <section class="interets">
-                <h2>CENTRES D'INTÉRÊT & ACTIVITÉS PROFESSIONNELLES</h2>
-                <ul>
-                    <li>Expert en modèles prédictifs pour l'optimisation des caractéristiques moléculaires</li>
-                    <li>Passionnée par l'interface entre science des données et applications en santé</li>
-                    <li>Veille technologique sur les innovations en intelligence artificielle</li>
-                    <li>Analyse critique des solutions métavers pour les applications médicales</li>
-                    <li>Experte en stratégies de communication médicale et scientifique (20+ ans d'expérience)</li>
-                    <li>Développement de ponts entre communication santé traditionnelle et solutions basées sur l'IA</li>
-                </ul>
-            </section>
-            
-            <section class="loisirs">
-                <h2>LOISIRS</h2>
-                <ul>
-                    <li>Voyages</li>
-                    <li>Langues étrangères</li>
-                    <li>Lecture (sciences et philosophie)</li>
-                    <li>Cuisine/pâtisserie</li>
-                    <li>Création de savons</li>
-                </ul>
-            </section>
+            <div class="section-card">
+                <h3>Projets & Réalisations</h3>
+                <p>Découvrez mes travaux récents en Data & IA et mes contributions aux projets en santé.</p>
+                <a href="projets.html" class="btn">Explorer mes projets</a>
+            </div>
         </div>
     </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Muriel Gosnat - Tous droits réservés</p>
+            <p>
+                <a href="https://www.linkedin.com/in/muriel-gosnat/">LinkedIn</a>
+                | <a href="contact.html">Contact</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
