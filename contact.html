@@ -267,7 +267,10 @@
             <h2>Me contacter</h2>
         </div>
     </section>
-    <div class="contact-info">
+    
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-info">
                 <h3>Mes coordonnées</h3>
                 <div class="contact-item">
                     <i>📱</i>
@@ -284,7 +287,7 @@
                 <div class="contact-item">
                     <i>📧</i>
                     <div>
-                        <p><a href="mailto:muriel@gosnat.com">contact@murielgosnat.com</a></p>
+                        <p><a href="mailto:muriel@gosnat.com">muriel@gosnat.com</a></p>
                     </div>
                 </div>
                 
@@ -297,7 +300,7 @@
             
             <div class="contact-form">
                 <h3>Formulaire de contact</h3>
-                <form action="#" method="post">
+                <form action="https://formspree.io/f/xqaprpgg" method="POST">
                     <div class="form-group">
                         <label for="name">Nom</label>
                         <input type="text" id="name" name="name" class="form-control" required>
@@ -314,6 +317,7 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" class="form-control" required></textarea>
                     </div>
+                    <input type="hidden" name="_subject" value="Nouveau message du site web de Muriel Gosnat">
                     <button type="submit" class="btn">Envoyer</button>
                 </form>
             </div>
@@ -331,7 +335,3 @@
     </footer>
 </body>
 </html>
-    <div class="container">
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Mes
