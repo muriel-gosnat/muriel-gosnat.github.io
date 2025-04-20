@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muriel Gosnat - Project Manager - Data & AI</title>
+    <title>Home - Muriel Gosnat</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -77,76 +77,149 @@
             background-color: #3498db;
         }
         
-        .language-switch {
-            margin-left: auto;
-        }
-        
-        .language-switch a {
-            padding: 15px 10px;
-        }
-        
         .hero {
-            background-color: #ecf0f1;
-            padding: 60px 0;
+            background-color: #3498db;
+            color: white;
+            padding: 80px 0;
             text-align: center;
-            margin-bottom: 40px;
         }
         
         .hero h2 {
-            font-size: 2em;
+            font-size: 2.5em;
+            margin-top: 0;
             margin-bottom: 20px;
-            color: #2c3e50;
         }
         
         .hero p {
             font-size: 1.2em;
             max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #3498db;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #2c3e50;
+            color: white;
         }
         
         .featured-sections {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h3 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-bottom: 60px;
         }
         
-        .section-card {
+        .feature-card {
             background-color: white;
-            border-radius: 5px;
-            padding: 30px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
         
-        .section-card:hover {
-            transform: translateY(-5px);
+        .feature-card:hover {
+            transform: translateY(-10px);
         }
         
-        .section-card h3 {
+        .feature-img {
+            height: 200px;
+            background-color: #ecf0f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3498db;
+            font-size: 3em;
+        }
+        
+        .feature-content {
+            padding: 25px;
+        }
+        
+        .feature-content h4 {
             color: #2c3e50;
             margin-top: 0;
-            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-size: 1.3em;
         }
         
-        .section-card ul {
-            padding-left: 20px;
+        .feature-content p {
+            margin-bottom: 20px;
         }
         
-        .btn {
-            display: inline-block;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin-top: 15px;
-            transition: background-color 0.3s;
+        .testimonials {
+            background-color: #ecf0f1;
+            padding: 60px 0;
+            text-align: center;
         }
         
-        .btn:hover {
-            background-color: #2980b9;
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-quote {
+            font-style: italic;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .contact-cta {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .contact-cta h3 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .contact-cta p {
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto 30px;
         }
         
         footer {
@@ -154,7 +227,6 @@
             color: white;
             text-align: center;
             padding: 20px 0;
-            margin-top: 60px;
         }
         
         footer p {
@@ -179,16 +251,10 @@
             nav ul {
                 flex-direction: column;
             }
-            
-            .language-switch {
-                margin-left: 0;
-            }
-            
-            .featured-sections {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -205,52 +271,96 @@
     <nav>
         <div class="container">
             <ul>
-                <li><a href="index-en.html" class="active">Home</a></li>
-                <li><a href="about-en.html">About</a></li>
-                <li><a href="experience-en.html">Experience</a></li>
-                <li><a href="skills-en.html">Skills</a></li>
-                <li><a href="projects-en.html">Projects</a></li>
-                <li><a href="contact-en.html">Contact</a></li>
-                <li class="language-switch"><a href="index.html">FR</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
     
     <section class="hero">
         <div class="container">
-            <h2>Welcome to my professional website</h2>
-            <p>Currently enrolled in an MBA in AI & Data Innovation, I leverage my 15 years of experience in healthcare projects to contribute to data-driven initiatives. With a dual expertise in science (PhD) and business strategy (ESSEC), I aim to lead innovative projects bridging research, institutions, and artificial intelligence across various sectors.</p>
+            <h2>Bridging Science, Data, and AI in Healthcare</h2>
+            <p>Specialized in transforming healthcare through data innovation and artificial intelligence solutions with a scientific approach.</p>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
         </div>
     </section>
     
-    <div class="container">
-        <div class="featured-sections">
-            <div class="section-card">
-                <h3>About Me</h3>
-                <p>Discover my background and vision for the integration of AI and Data in multiple sectors and applications.</p>
-                <a href="about-en.html" class="btn">Learn more</a>
+    <section class="featured-sections">
+        <div class="container">
+            <div class="section-title">
+                <h3>My Expertise</h3>
+                <p>With a background in chemistry and healthcare marketing, I bring a unique perspective to data-driven projects in the healthcare sector.</p>
             </div>
             
-            <div class="section-card">
-                <h3>Professional Experience</h3>
-                <p>Over 15 years of experience in project management, scientific communication, and innovative strategy development.</p>
-                <a href="experience-en.html" class="btn">View my career</a>
-            </div>
-            
-            <div class="section-card">
-                <h3>Projects & Achievements</h3>
-                <p>Discover my recent work in Data & AI and my contributions to projects in healthcare and beyond.</p>
-                <a href="projects-en.html" class="btn">Explore my projects</a>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Artificial Intelligence</h4>
+                        <p>Developing AI frameworks for pharmaceutical research, particularly for ADMET optimization and knowledge management.</p>
+                        <a href="projects.html" class="cta-button">View Projects</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <i class="fas fa-chart-network"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Healthcare Communication</h4>
+                        <p>Creating effective strategies and platforms to facilitate knowledge sharing between researchers, healthcare professionals, and patients.</p>
+                        <a href="projects.html" class="cta-button">View Projects</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Metaverse in Healthcare</h4>
+                        <p>Pioneering immersive technologies for medical applications, including surgical planning and patient rehabilitation.</p>
+                        <a href="projects.html" class="cta-button">View Projects</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h3>What Colleagues Say</h3>
+                <p>Feedback from professionals I've collaborated with throughout my career.</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <p class="testimonial-quote">"Muriel's ability to combine scientific rigor with strategic thinking brings exceptional value to healthcare innovation projects. Her leadership in implementing AI solutions has been transformative for our research initiatives."</p>
+                <p class="testimonial-author">— Dr. Pierre Laurent, Research Director</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-cta">
+        <div class="container">
+            <h3>Let's Work Together</h3>
+            <p>Interested in collaborating on healthcare innovation, AI implementation, or metaverse applications in the medical field? I'm always open to discussing new projects and challenges.</p>
+            <a href="contact.html" class="cta-button">Contact Me</a>
+        </div>
+    </section>
     
     <footer>
         <div class="container">
             <p>© 2025 Muriel Gosnat - All rights reserved</p>
             <p>
                 <a href="https://www.linkedin.com/in/muriel-gosnat/">LinkedIn</a>
-                | <a href="contact-en.html">Contact</a>
+                | <a href="contact.html">Contact</a>
             </p>
         </div>
     </footer>
