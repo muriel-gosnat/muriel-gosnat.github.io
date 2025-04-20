@@ -77,14 +77,6 @@
             background-color: #3498db;
         }
         
-        .language-switch {
-            margin-left: auto;
-        }
-        
-        .language-switch a {
-            padding: 15px 10px;
-        }
-        
         .page-title {
             background-color: #ecf0f1;
             padding: 40px 0;
@@ -104,54 +96,98 @@
             margin-bottom: 40px;
         }
         
-        .about-image {
-            background-color: #ddd;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 5px;
-            overflow: hidden;
+        .profile-photo {
+            text-align: center;
         }
         
-        .about-image img {
-            width: 80%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 5px;
-            display: block;
-            margin: 0 auto;
+        .profile-photo img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        .about-text h3 {
-            color: #2c3e50;
-            margin-top: 0;
-        }
-        
-        .interests {
+        .bio {
             background-color: white;
             padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .bio h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .bio p {
+            margin-bottom: 20px;
+        }
+        
+        .values {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             margin-bottom: 40px;
         }
         
-        .interests h3 {
+        .values h3 {
             color: #2c3e50;
             margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
         }
         
-        .interests-grid {
+        .values-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
         }
         
-        .interest-item {
-            background-color: #ecf0f1;
-            padding: 15px;
+        .value-item {
+            padding: 20px;
             border-radius: 5px;
+            border-left: 3px solid #3498db;
+            background-color: #ecf0f1;
+        }
+        
+        .value-item h4 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        .cta {
+            background-color: #3498db;
+            color: white;
             text-align: center;
+            padding: 40px 0;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .cta h3 {
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #3498db;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            background-color: #2c3e50;
+            color: white;
         }
         
         footer {
@@ -185,11 +221,11 @@
                 flex-direction: column;
             }
             
-            .language-switch {
-                margin-left: 0;
+            .about-content {
+                grid-template-columns: 1fr;
             }
             
-            .about-content {
+            .values-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -210,13 +246,12 @@
     <nav>
         <div class="container">
             <ul>
-                <li><a href="index-en.html">Home</a></li>
-                <li><a href="about-en.html" class="active">About</a></li>
-                <li><a href="experience-en.html">Experience</a></li>
-                <li><a href="skills-en.html">Skills</a></li>
-                <li><a href="projects-en.html">Projects</a></li>
-                <li><a href="contact-en.html">Contact</a></li>
-                <li class="language-switch"><a href="apropos.html">FR</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -229,58 +264,63 @@
     
     <div class="container">
         <div class="about-content">
-            <div class="about-image">
-                <img src="images/profile.jpg" alt="Muriel Gosnat">
-                <!-- Replace with your profile photo -->
+            <div class="profile-photo">
+                <img src="images/votrephoto.png" alt="Muriel Gosnat">
             </div>
-            <div class="about-text">
-                <h3>My Background and Vision</h3>
-                <p>Hello, I'm Muriel Gosnat, a Project Manager specializing in Data & Artificial Intelligence. My professional journey has been built around a passion for innovation and scientific communication.</p>
+            
+            <div class="bio">
+                <h3>Professional Profile</h3>
+                <p>With a strong academic background in chemistry (PhD) and healthcare marketing, I have developed extensive expertise in the field of healthcare communication and strategic project management.</p>
                 
-                <p>With a dual expertise in science (PhD in Chemistry) and business strategy (ESSEC), I have developed a unique approach that allows me to bridge technological advances with the concrete needs of various sectors.</p>
+                <p>My professional journey has allowed me to evolve from scientific research to leadership roles in healthcare communication agencies, where I honed my skills in team management, strategic analysis, and innovative concept development.</p>
                 
-                <p>Currently pursuing an MBA in AI & Data Innovation, I'm focusing on integrating cutting-edge technologies in both medical and broader business contexts. My goal is to contribute to projects that transform how we use data to improve decision-making and drive innovation.</p>
+                <p>Currently, I am focusing on the exciting intersection of artificial intelligence and healthcare data, specializing in developing frameworks that optimize pharmaceutical research and development through AI applications.</p>
                 
-                <p>Throughout my 15 years of experience, I have developed a strong ability to lead projects at the interface between research, institutions, and new technologies. I am particularly interested in AI applications to optimize processes and improve data management strategies.</p>
+                <p>My dual expertise in both scientific disciplines and strategic marketing gives me a unique perspective on complex healthcare challenges, allowing me to bridge the gap between technical innovations and practical business applications.</p>
                 
-                <p>I am constantly looking for new challenges and collaboration opportunities with innovative teams that share my vision of a data-transformed world across different industries.</p>
+                <p>I am passionate about leveraging emerging technologies like AI and the metaverse to transform healthcare delivery, patient experience, and medical research. My ongoing MBA in AI and Data Innovation reflects my commitment to staying at the forefront of these rapidly evolving fields.</p>
             </div>
         </div>
         
-        <div class="interests">
-            <h3>Professional Interests and Activities</h3>
-            <div class="interests-grid">
-                <div class="interest-item">
-                    <p>AI & data innovation</p>
+        <div class="values">
+            <h3>My Professional Values</h3>
+            <div class="values-grid">
+                <div class="value-item">
+                    <h4>Innovation</h4>
+                    <p>Constantly seeking new approaches and solutions to drive progress in healthcare and technology.</p>
                 </div>
-                <div class="interest-item">
-                    <p>Cross-industry AI applications</p>
+                
+                <div class="value-item">
+                    <h4>Scientific Rigor</h4>
+                    <p>Applying evidence-based methodologies and maintaining high standards in all professional endeavors.</p>
                 </div>
-                <div class="interest-item">
-                    <p>Strategic communication</p>
+                
+                <div class="value-item">
+                    <h4>Collaboration</h4>
+                    <p>Building effective partnerships across disciplines to achieve comprehensive solutions to complex problems.</p>
                 </div>
-                <div class="interest-item">
-                    <p>Metaverse and immersive technologies</p>
+                
+                <div class="value-item">
+                    <h4>Patient-Centricity</h4>
+                    <p>Keeping the needs and experiences of patients at the heart of healthcare innovation and communication.</p>
                 </div>
-                <div class="interest-item">
-                    <p>Intersector innovation</p>
+                
+                <div class="value-item">
+                    <h4>Continuous Learning</h4>
+                    <p>Embracing lifelong education and adaptation in our rapidly evolving technological landscape.</p>
                 </div>
-                <div class="interest-item">
-                    <p>Traveling</p>
-                </div>
-                <div class="interest-item">
-                    <p>Foreign languages</p>
-                </div>
-                <div class="interest-item">
-                    <p>Scientific reading</p>
-                </div>
-                <div class="interest-item">
-                    <p>Cooking/baking</p>
-                </div>
-                <div class="interest-item">
-                    <p>Soap making</p>
+                
+                <div class="value-item">
+                    <h4>Strategic Vision</h4>
+                    <p>Maintaining a forward-looking perspective that anticipates future challenges and opportunities.</p>
                 </div>
             </div>
+        </div>
+        
+        <div class="cta">
+            <h3>Interested in collaborating on innovative healthcare and AI projects?</h3>
+            <p>I'm always open to discussing new opportunities and challenges.</p>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
         </div>
     </div>
     
@@ -289,7 +329,7 @@
             <p>© 2025 Muriel Gosnat - All rights reserved</p>
             <p>
                 <a href="https://www.linkedin.com/in/muriel-gosnat/">LinkedIn</a>
-                | <a href="contact-en.html">Contact</a>
+                | <a href="contact.html">Contact</a>
             </p>
         </div>
     </footer>
