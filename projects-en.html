@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Muriel Gosnat</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .profile-info h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        
+        .profile-info h2 {
+            margin: 5px 0 0;
+            font-weight: normal;
+            font-size: 1.3em;
+            color: #3498db;
+        }
+        
+        nav {
+            background-color: #34495e;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav li {
+            margin: 0;
+        }
+        
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a.active {
+            background-color: #3498db;
+        }
+        
+        nav a:hover {
+            background-color: #3498db;
+        }
+        
+        .page-title {
+            background-color: #ecf0f1;
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+        
+        .page-title h2 {
+            margin: 0;
+            font-size: 2em;
+            color: #2c3e50;
+        }
+        
+        .projects-filters {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .filter-btn {
+            background-color: #ecf0f1;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-img {
+            background-color: #ddd;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .project-info {
+            padding: 20px;
+        }
+        
+        .project-info h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .project-category {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            font-size: 0.8em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-info">
+                    <h1>Muriel GOSNAT</h1>
+                    <h2>Project Manager - Data & AI</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="page-title">
+        <div class="container">
+            <h2>My Projects and Achievements</h2>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="projects-filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Data & AI</button>
+            <button class="filter-btn">Healthcare Communication</button>
+            <button class="filter-btn">Metaverse</button>
+            <button class="filter-btn">Research</button>
+        </div>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">
+                    <p>Project image</p>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Data & AI</span>
+                    <h3>ADMET Optimization Using AI</h3>
+                    <p>Development of a managerial framework for predicting physico-chemical and biological characteristics of molecules using artificial intelligence.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <p>Project image</p>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Data & AI</span>
+                    <h3>Validation of Knowledge Management AI Model</h3>
+                    <p>Development and validation of an advanced AI-based knowledge management system to optimize the use of scientific data in the pharmaceutical sector.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <p>Project image</p>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Metaverse & Healthcare</span>
+                    <h3>Avenir Rachis - Metaverse for Spine Surgery</h3>
+                    <p>Design of a metaverse dedicated to supporting patients and surgeons in spine operations. This innovative project integrates 3D modeling, digital twins and rehabilitation monitoring to improve post-operative results.</p>
+                    <a href="documents/avenir-rachis.pdf" class="btn" target="_blank">Download presentation</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <p>Project image</p>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Healthcare Communication</span>
+                    <h3>Medical Awareness Campaign</h3>
+                    <p>Design and implementation of a strategic communication campaign to raise public awareness about a specific pathology, integrating different channels and media to maximize impact and reach.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <p>Project image</p>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Healthcare Communication</span>
+                    <h3>Scientific Communication Platform</h3>
+                    <p>Development of an innovative platform to facilitate communication between researchers, healthcare professionals and patients, simplifying knowledge sharing and access to medical information.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <p>Project image</p>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Research</span>
+                    <h3>Relationships Between Thermodynamic and Geometric Parameters in Chiral Resolution by Modified Cyclodextrins</h3>
+                    <p>Doctoral thesis on the study of molecular recognition mechanisms involved in the separation of enantiomeric compounds using chemically modified cyclodextrins.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Muriel Gosnat - All rights reserved</p>
+            <p>
+                <a href="https://www.linkedin.com/in/muriel-gosnat/">LinkedIn</a>
+                | <a href="contact.html">Contact</a>
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // JavaScript for filtering projects
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = this.textContent;
+                    
+                    // Show/hide project cards based on filter
+                    projectCards.forEach(card => {
+                        const category = card.querySelector('.project-category').textContent;
+                        
+                        if (filterValue === 'All' || category.includes(filterValue)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
